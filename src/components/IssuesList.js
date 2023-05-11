@@ -118,7 +118,7 @@ export default function IssuesList({labels, status}) {
 
   console.log('SEARCH QUERY>>>>>', searchQuery);
   return (
-    <View style={{flex: 1}}>
+    <ScrollView style={{flex: 1}}>
       {issuesQuery?.data?.map(item => {
         return (
           <View style={styles.issueContainer}>
@@ -128,7 +128,7 @@ export default function IssuesList({labels, status}) {
           </View>
         );
       })}
-    </View>
+    </ScrollView>
   );
 }
 const styles = StyleSheet.create({
@@ -139,22 +139,27 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
     marginTop: 3,
     display: 'flex',
-    flexDirection:'row'
+    flexDirection:'row',
+    borderRadius: 10,
+    backgroundColor:'#a6bce0'
    
   },
   commentLabel: {
     width: '20%',
-    backgroundColor: 'pink',
     height: '100%',
+    justifyContent:'center',
+    alignItems:'center'
   },
 
   commentInfoSec: {
     width: '60%',
-    backgroundColor: 'yellow',
     height: '100%',
+    justifyContent:'center',
+    alignItems:'center'
   },
   commentSec:{
     width: '20%',
-    backgroundColor:'red'
+    justifyContent:'center',
+    alignItems:'center'
   }
 });

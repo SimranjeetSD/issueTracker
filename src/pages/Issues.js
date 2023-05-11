@@ -81,7 +81,10 @@ const styles = StyleSheet.create({
   },
   issuesListSec: {
     flex: 0.8,
-    backgroundColor: 'purple',
     width: '100%',
+    justifyContent:'center',
+    alignItems:'center',
+    paddingHorizontal: 10,
+   
   },
 });
